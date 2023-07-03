@@ -12,9 +12,9 @@ const Home = () => {
     {id: '5', title: 'Review', description: 'Verification in progress'},
   ];
   const dataFlow = [
-    {id: '1', title: 'Review', description: 'Verification in progress'},
+    {id: '1', title: 'Review', description: 'Document Submission in process'},
     {id: '2', title: 'Review', description: 'Verification in progress'},
-    {id: '3', title: 'Review', description: 'Verification in progress'},
+    {id: '3', title: 'Review', description: 'Graph update in progress'},
     {id: '4', title: 'Review', description: 'Verification in progress'},
   ];
   const renderItem = ({item}) => (
@@ -36,7 +36,7 @@ const Home = () => {
   );
   const flowList = ({item}) => (
     <View style={styles.itemFlow}>
-      <Text style={styles.text}>{item.description}</Text>
+      <Text style={[styles.text, {color: '#000'}]}>{item.description}</Text>
     </View>
   );
   return (
@@ -73,9 +73,11 @@ const Home = () => {
         }}>
         <Text style={styles.text}>Search</Text>
       </View>
-      <Spacer top={40} />
+      <Spacer top={30} />
       <View style={styles.normalView}>
-        <Text style={styles.heading}>Task-based{'\n'}explanation process</Text>
+        <Text style={[styles.heading, {paddingLeft: 10}]}>
+          Task-based{'\n'}explanation process
+        </Text>
         <FlatList
           data={data}
           renderItem={renderItem}
@@ -85,7 +87,7 @@ const Home = () => {
         />
       </View>
       <View style={styles.normalView}>
-        <Text style={styles.heading}>Flows List</Text>
+        <Text style={[styles.heading, {paddingLeft: 10}]}>Flows List</Text>
         <FlatList
           data={dataFlow}
           renderItem={flowList}
@@ -136,7 +138,7 @@ const styles = StyleSheet.create({
   },
   normalView: {
     width: '100%',
-    padding: 20,
+    padding: 10,
   },
   textSmall: {
     fontSize: 12,
