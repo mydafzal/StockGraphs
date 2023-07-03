@@ -249,3 +249,12 @@ export const GraphIcon = ({color, size, style}) => (
     style={style}
   />
 );
+export const SearchIcon = ({color, size, style}) => (
+  <VectorIcon
+    name="search"
+    color={color}
+    size={size}
+    type="Feather"
+    style={style}
+  />
+);
