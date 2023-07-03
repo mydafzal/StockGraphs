@@ -2,7 +2,7 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {GraphIcon} from '../icons';
 import LottieView from 'lottie-react-native';
-const Splash = () => {
+const Splash = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={{flexDirection: 'row'}}>
@@ -15,7 +15,9 @@ const Splash = () => {
         autoPlay
       />
       <View>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Home')}>
           <Text style={styles.text}>Get Started</Text>
         </TouchableOpacity>
       </View>

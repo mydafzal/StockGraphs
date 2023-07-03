@@ -24,7 +24,13 @@ const Navigation = () => {
           name="Splash"
           component={Splash}
         />
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name="Home"
+          component={Home}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
